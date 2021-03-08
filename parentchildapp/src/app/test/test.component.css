@@ -1,0 +1,9 @@
+p{
+    color: blue;
+}
+p.greet{
+    color: green;
+}
+p#upper{
+    color: yellow;
+}

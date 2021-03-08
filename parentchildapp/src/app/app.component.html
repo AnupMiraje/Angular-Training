@@ -1,0 +1,4 @@
+<span>{{ title }} is running!</span>
+<hr>
+<app-child (childEvent)="message=$event" [parentData]="compname"></app-child>
+The data sent to parent from child: {{message}}

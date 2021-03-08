@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+
+<!-- uppercase, number and other are pipes-->
+<h2>{{myname | uppercase}}</h2>
+<h2>{{myname | lowercase}}</h2>
+<h2>{{myname | titlecase}}</h2>
+<h2>{{myname | slice:1:4}}</h2>
+<h2>{{3214001 | number}}</h2>
+<h2>{{0.21 | percent}}</h2>
+
+<!-- 
+  sq is my defining function
+  by creating pipe 
+  cd src/app
+  ng g pipe <pipe name> // ng g pipe <pipe name> 
+-->
+<h2>{{ 5 | sq}}</h2>
+
+
+<!--
+  Aadharno pipe 
+-->
+<h2>{{ 123456789012 | aadharno : '-'}}</h2>
+<h2>{{ 123456789012 | aadharno : ' '}}</h2>
+
+<!-- chaining of pipe-->
+<h2>{{myname | uppercase | slice:1:4}}</h2>

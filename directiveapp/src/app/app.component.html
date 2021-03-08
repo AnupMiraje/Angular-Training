@@ -1,0 +1,21 @@
+<h2>{{title}}</h2>
+
+<!-- attribute directives ngClass, ngStyle-->
+<h2 [ngClass]="{redclass : mypwd == 'amit'}">Enter Password</h2>
+<input type="password" [(ngModel)]="mypwd" />
+
+<!-- structure directives *ngIf, *ngFor-->
+<ul *ngIf="mypwd == 'amit'">
+  <li *ngFor="let emp of employees"> 
+    {{emp}}
+  </li>
+</ul>
+
+<!-- attribute directives ngStyle-->
+<h4 [ngStyle] = "{color:mypwd == 'amit'?'green':'red'}">Individual List</h4>
+
+<!-- custom directives -->
+<p myhover>
+  This is the paragraph to which custom 
+  attribute directive is applied
+</p>

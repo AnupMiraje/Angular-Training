@@ -1,0 +1,144 @@
+Angular Building Blocks:-
+1. Modules - @ngModule, @component
+2. Components - ts, html, css
+3. Directives
+4. Pipes
+5. Services
+6. Routers
+
+Notes:-
+*Component:
+
+//Create Component
+cd src/app
+ng g c <component name> // ng g component <component name>
+
+Data Binding:	//refer databindingapp
+1. Interpolation	ts -> HTML
+2. Property Binding	ts -> HTML
+3. Event Binding	HTML -> ts
+4. Two way		HTML -> ts & ts -> HTML
+
+*Directives:   //refer directiveapp
+1) Structural Directive:
+manipulate or change DOM dynamically.  
+eg.  *ngIf  and *ngFor
+
+2) Attribute Directive:
+Add Cosmetics to the element. 
+eg.  ngClass and ngStyle
+
+above directives are built-in directives.
+
+3) custom directives:
+our own directives
+command: under src/app/
+	ng g directive customhover
+
+							* Day 3 *
+
+*Pipes:    //refer custompipeapp
+
+//create pipe
+cd src/app
+ng g pipe <pipe name>
+
+// creating custom pipe
+
+mySql DB - EMP table
+
+EMP table has columns - ID, FNAME, LNAME, MOBILENO, AADHARNO
+Server side components - middle layer would connect with RDBMS MySql
+
+Server Side components - REST ful web service developed using Spring/Java
+Restful web service will connect with RDBMS db
+
+Angular App [frontend] - client side framework would give call to remote REST ful web service
+Communication between Angular App and remote REST ful web service would happen in JSON format
+
+{ id : 10, fname : 'amit' , lname: 'kumar', aadharno : 12345678912 }
+
+[ { id : 10, fname : 'amit' , lname: 'kumar', aadharno : 12345678912 },                                  
+  { id : 11, fname : 'ajit' , lname: 'roy', aadharno : 343287654123 } ]
+
+//transfer
+    let delim:string = args[0];       // '-'
+    let first:string = value.toString().substr(0,4);
+    let second:string = value.toString().substr(4,4);
+    let third:string = value.toString().substr(8,4);
+    return first + delim + second + delim + third;
+
+//html
+
+	<h1>{{title}}</h1>
+
+	<!-- uppercase, number and other are pipes-->
+	<h2>{{myname | uppercase}}</h2>
+	<h2>{{myname | lowercase}}</h2>
+	<h2>{{myname | titlecase}}</h2>
+	<h2>{{myname | slice:1:4}}</h2>
+	<h2>{{3214001 | number}}</h2>
+	<h2>{{0.21 | percent}}</h2>
+
+	<!-- 
+	  sq is my defining function
+	  by creating pipe 
+	  cd src/app
+	  ng g pipe <pipe name> // ng g pipe <pipe name> 
+	-->
+	<h2>{{ 5 | sq}}</h2>
+
+
+	<!--
+	  Aadharno pipe 
+	-->
+	<h2>{{ 123456789012 | aadharno : '-'}}</h2>
+	<h2>{{ 123456789012 | aadharno : ' '}}</h2>
+
+	<!-- chaining of pipe-->
+	<h2>{{myname | uppercase | slice:1:4}}</h2>
+
+
+*Services:
+
+component - ts
+service - ts
+
+Question: what would be relationship between component and service ??
+Ans: 	component is dependent on service
+	or 
+	component has a service
+
+we have to injecte the service on component through constructor.
+
+//
+
+HttpClient would be Injected inside Service class
+Service class would be injected inside your any component
+
+//create service
+cd src/app
+ng g service <service name>
+
+
+Client and Server
+
+initial line - url
+set of headers
+blank line
+body
+
+//remote json file for remote books data
+https://jsonplaceholder.typicode.com/posts
+
+							* Day 4 *
+
+* AngularForms and Routing Mechanism in angular
+
+// refer angularformapp
+
+1. Template Driven Form 
+2. Model Driven Form [ Reactive Form ]
+
+ng g c templatedrivenform
+

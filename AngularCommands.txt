@@ -1,0 +1,15 @@
+//typescript:
+npm install -g typescript
+tsc File1.ts
+node File1.js
+
+//Angular
+npm install -g @angular/cli
+ng new firstapp
+cd firstapp
+ng serve // or   ng serve --port 4201
+http://localhost:4200
+
+Note:- you are simply going to select all the default values and 
+for simplicity just keep on saying N
+

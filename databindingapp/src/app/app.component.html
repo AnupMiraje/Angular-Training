@@ -1,0 +1,19 @@
+<!-- Data Binding -->
+
+<!-- Interpolation(ts to HTML) -->
+<img src="{{imagepath}}">
+<img [src]="imagepath">
+<img bind-src="imagepath">
+<hr>
+
+<!-- Property Binding(ts to HTML) -->
+<button [disabled]="buttonStatus">My Button</button>
+<button bind-disabled="!buttonStatus">My Button</button>
+
+<!-- Event Binding(HTML to ts) -->
+<button (click)="myEvent($event)">Click Me to generate Event</button>
+<hr>
+
+<!-- Two way Data Binding-->
+<input type="text" [(ngModel)]="custname"/> <br>
+You have written : {{custname}} <br>

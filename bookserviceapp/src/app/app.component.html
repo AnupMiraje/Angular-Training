@@ -1,0 +1,17 @@
+<h3>{{somedata}}</h3>
+
+<!-- Local books-->
+<h3>Local Data</h3>
+<button (click)="loadlocalbooks()">Local Data</button>
+<ul *ngFor="let b of localbookList">
+  <li>{{b.id}} : {{b.title}} ( {{b.year}} ) {{b.author}}</li>
+</ul>
+
+<hr>
+
+<!-- Remote books-->
+<h3>Remote Data</h3>
+<button (click)="loadremotebooks()">Remote Data</button>
+<ul *ngFor="let b of remotebookList">
+  <li>{{b.userId}} : {{b.id}} : {{b.title}} - {{b.body}}</li>
+</ul>
