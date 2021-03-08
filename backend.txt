@@ -1,9 +1,0 @@
-// back end
-
-http://localhost:8899/user
-http://localhost:8899/user/1
-http://localhost:8899/user   [ POST] [JSON]
-
-user  table
-login table
-username   password
